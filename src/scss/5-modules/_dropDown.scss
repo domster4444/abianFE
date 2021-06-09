@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+#welcomeHome {
+  @include media('<=495px') {
+    ul li a .icon {
+      height: 40px;
+      width: 40px;
+      margin-right: 75px !important;
+    }
+  }
+  .setting-drop {
+    @include media('<=495px') {
+      .back-setting-btn {
+        text-align: right;
+      }
+    }
+  }
+  nav .drop-btn {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 5px solid lightgray;
+    background-image: url(../img/accounts/minionavatar.jpg);
+    background-position: center;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+  }
+  nav .drop-btn span {
+    float: right;
+    line-height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  nav .tooltip {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    height: 15px;
+    width: 15px;
+    background: #242526;
+    transform: rotate(45deg);
+    display: none;
+  }
+  nav .tooltip.show {
+    display: block;
+  }
+  nav .wrapper {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    //?dropdown box bg
+    background-image: linear-gradient(0deg, #301cab, #4448d3 52%, #5774fa);
+    display: none;
+    transition: all 0.3s ease;
+    width: 400px;
+    @include media('<=495px') {
+      width: 250px;
+    }
+  }
+  nav .wrapper.show {
+    display: block;
+    display: flex;
+  }
+  .wrapper ul {
+    width: 400px;
+    @include media('<=495px') {
+    }
+    list-style: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li {
+    line-height: 55px;
+  }
+  .wrapper ul li a {
+    position: relative;
+    //?color of lis inside dropdown box
+    color: white;
+    font-size: 18px;
+    @include media('<=495px') {
+      font-size: 12px;
+    }
+    font-weight: 500;
+    padding: 0 10px;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    text-decoration: none;
+  }
+  .wrapper ul li:hover a {
+    //?li hover state
+    background: white;
+    color: black;
+  }
+
+  .wrapper ul li:hover a > .icon {
+    background: white;
+  }
+  .wrapper ul li:hover a > .icon span {
+    color: rgb(84, 109, 244);
+  }
+
+  ul li a .icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 13px;
+    //?icon outer color
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+  }
+  ul li a .icon span {
+    line-height: 40px;
+    font-size: 20px;
+    //?icon inner color
+    color: white;
+  }
+  ul li a i {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    pointer-events: none;
+  }
+  .wrapper ul.setting-drop,
+  .wrapper ul.help-drop {
+    display: none;
+  }
+  .wrapper .arrow {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+  }
+  .wrapper .arrow span {
+    margin-right: 15px;
+  }
+}
