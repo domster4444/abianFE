@@ -8,7 +8,7 @@ import { useHistory } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 //------------------react tostify
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function LoginPage(props) {
@@ -44,7 +44,10 @@ export default function LoginPage(props) {
           setPassword('');
           //-------------------------------------change staet to true________________________________
           (() => {
+            toast('success');
             props.setLoggedInProps('true');
+            //TODO:app's s
+            props.setUser(res.data.accountHolder);
           })();
           //----------------------------------After state change  history.push(/welcome home)
 

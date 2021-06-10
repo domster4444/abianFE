@@ -19,6 +19,7 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
+  overflow: scroll;
   left: 0;
   height: 100%;
   width: 78px;
@@ -243,6 +244,7 @@ body {
   //?home content bg
   background: rgb(244, 242, 251);
   transition: all 0.5s ease;
+  overflow: scroll;
 }
 .sidebar.active ~ .home_content {
   z-index: 100;
@@ -257,4 +259,46 @@ body {
 .sidebar.active ~ .home_content {
   width: calc(100% - 240px);
   left: 240px;
+}
+
+// ?-----------custome scroll ba---------
+
+.home_content::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eff1f5;
+}
+
+.home_content::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.home_content::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: lightsteelblue;
+  border: 2px solid #eff1f5;
+}
+.sidebar::-webkit-scrollbar {
+  width: 1px;
+  background-color: #eff1f5;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: lightsteelblue;
+  border: 2px solid #eff1f5;
+}
+
+//?scroll is enabled
+//?when window height is small scroll appears
+//?when scrolled the logout btn in sidebar changes its position
+//?in a bad way so..
+//?display none just use profile btn to log out instead
+.sidebar .profile_content .profile {
+  display: none;
 }

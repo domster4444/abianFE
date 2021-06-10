@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './scss/main.css';
 // --tostify
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Header from '../src/components/1atoms/Header';
@@ -21,6 +21,8 @@ import WelcomeHome from './components/5pages/WelcomeHome';
 import { css } from 'styled-components';
 function App() {
   const [isLoggedIn, setisLoggedIn] = useState('false');
+  const [currentUser, setUser] = useState('');
+
   return (
     <>
       <Router>
@@ -44,6 +46,7 @@ function App() {
             <LoginPage
               isLoggedInProps={isLoggedIn}
               setLoggedInProps={setisLoggedIn}
+              setUser={setUser}
             />
           )}
         />
@@ -73,6 +76,7 @@ function App() {
           path="/welcomehome"
           component={() => (
             <WelcomeHome
+              currentUser={currentUser}
               setLoggedInProps={setisLoggedIn}
               loggedInStateProps={isLoggedIn}
             />

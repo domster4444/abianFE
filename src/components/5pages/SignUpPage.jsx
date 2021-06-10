@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
 //------------------react tostify
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export class SignUpPage extends Component {
@@ -61,7 +61,6 @@ export class SignUpPage extends Component {
           toast.success('Successfully Account Created');
         } else {
           throw new Error('sorry');
-          toast.error('Sorry Something Went Wrong');
         }
       })
       .catch((error) => {

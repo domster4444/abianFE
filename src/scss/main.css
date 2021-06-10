@@ -3694,6 +3694,84 @@ a:visited {
   margin-bottom: 1.5rem;
 }
 
+.c-dashboardInfo {
+  margin-bottom: 1.5rem;
+}
+
+.c-dashboardInfo .wrap {
+  background: #ffffff;
+  box-shadow: 0.2rem 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.7rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2.5rem 2rem;
+  height: 100%;
+}
+
+.c-dashboardInfo__title,
+.c-dashboardInfo__subInfo {
+  color: #6c6c6c;
+  font-size: 1.18em;
+}
+
+.c-dashboardInfo span {
+  display: block;
+}
+
+.c-dashboardInfo__count {
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 6.4rem;
+  color: #323c43;
+}
+
+.c-dashboardInfo .wrap:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  content: '';
+}
+
+.c-dashboardInfo:nth-child(1) .wrap:after {
+  background: linear-gradient(82.59deg, #00c48c 0%, #00a173 100%);
+}
+
+.c-dashboardInfo:nth-child(2) .wrap:after {
+  background: linear-gradient(81.67deg, #0084f4 0%, #1a4da2 100%);
+}
+
+.c-dashboardInfo:nth-child(3) .wrap:after {
+  background: linear-gradient(69.83deg, #0084f4 0%, #00c48c 100%);
+}
+
+.c-dashboardInfo:nth-child(4) .wrap:after {
+  background: linear-gradient(81.67deg, #ff647c 0%, #1f5dc5 100%);
+}
+
+.c-dashboardInfo__title svg {
+  color: #d7d7d7;
+  margin-left: 0.5rem;
+}
+
+.MuiSvgIcon-root-19 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 2.4rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.c-dashboardInfo__title svg {
+  color: #4e5fe7;
+}
+
 .Toastify__toast--success {
   font-size: 1.7rem !important;
 }
@@ -3722,44 +3800,30 @@ a:visited {
   background: #333f48 !important;
 }
 
-@media (max-width: 495px) {
-  #welcomeHome ul li a .icon {
-    height: 40px;
-    width: 40px;
-    margin-right: 75px !important;
-  }
-}
-
-@media (max-width: 495px) {
-  #welcomeHome .setting-drop .back-setting-btn {
-    text-align: right;
-  }
-}
-
-#welcomeHome nav .drop-btn {
+#welcomeHome nav .circularProfiler {
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
-  border: 5px solid lightgray;
+  border: 0.5rem solid lightgray;
   background-image: url(../img/accounts/minionavatar.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-#welcomeHome nav .drop-btn span {
+#welcomeHome nav .circularProfiler span {
   float: right;
-  line-height: 50px;
-  font-size: 28px;
+  line-height: 5rem;
+  font-size: 2.8rem;
   cursor: pointer;
 }
 
 #welcomeHome nav .tooltip {
   position: absolute;
-  right: 20px;
-  bottom: -20px;
-  height: 15px;
-  width: 15px;
+  right: 2rem;
+  bottom: -2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   background: #242526;
   transform: rotate(45deg);
   display: none;
@@ -3772,19 +3836,40 @@ a:visited {
 #welcomeHome nav .wrapper {
   position: absolute;
   top: 65px;
-  right: 0;
   display: flex;
+  width: 400px;
   overflow: hidden;
   border-radius: 5px;
-  background-image: linear-gradient(0deg, #301cab, #4448d3 52%, #5774fa);
   display: none;
   transition: all 0.3s ease;
-  width: 400px;
+  background-image: linear-gradient(0deg, #301cab, #4448d3 52%, #5774fa);
+  z-index: 100;
+  top: 7.5rem;
+  right: 0;
+  background-image: linear-gradient(0deg, #301cab, #4448d3 52%, #5774fa);
 }
 
 @media (max-width: 495px) {
   #welcomeHome nav .wrapper {
-    width: 250px;
+    transform: scale(0.8);
+    position: absolute;
+    top: 5rem;
+    right: -4rem;
+  }
+}
+
+@media (max-width: 429px) {
+  #welcomeHome nav .wrapper {
+    top: 5rem;
+  }
+}
+
+@media (max-width: 417px) {
+  #welcomeHome nav .wrapper {
+    transform: scale(0.7) !important;
+    position: absolute;
+    top: 6rem;
+    right: -6rem;
   }
 }
 
@@ -3796,30 +3881,24 @@ a:visited {
 #welcomeHome .wrapper ul {
   width: 400px;
   list-style: none;
-  padding: 10px;
+  padding: 1rem;
   transition: all 0.3s ease;
 }
 
 #welcomeHome .wrapper ul li {
-  line-height: 55px;
+  line-height: 5.5rem;
 }
 
 #welcomeHome .wrapper ul li a {
   position: relative;
   color: white;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 500;
-  padding: 0 10px;
+  padding: 0 1rem;
   display: flex;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   align-items: center;
   text-decoration: none;
-}
-
-@media (max-width: 495px) {
-  #welcomeHome .wrapper ul li a {
-    font-size: 12px;
-  }
 }
 
 #welcomeHome .wrapper ul li:hover a {
@@ -3836,9 +3915,9 @@ a:visited {
 }
 
 #welcomeHome ul li a .icon {
-  height: 40px;
-  width: 40px;
-  margin-right: 13px;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1.3rem;
   background-color: transparent;
   display: flex;
   justify-content: center;
@@ -3847,15 +3926,15 @@ a:visited {
 }
 
 #welcomeHome ul li a .icon span {
-  line-height: 40px;
-  font-size: 20px;
+  line-height: 4rem;
+  font-size: 2rem;
   color: white;
 }
 
 #welcomeHome ul li a i {
   position: absolute;
-  right: 10px;
-  font-size: 25px;
+  right: 1rem;
+  font-size: 2.5rem;
   pointer-events: none;
 }
 
@@ -3865,15 +3944,30 @@ a:visited {
 }
 
 #welcomeHome .wrapper .arrow {
-  padding-left: 10px;
-  font-size: 20px;
+  padding-left: 1rem;
+  font-size: 2rem;
   font-weight: 500;
   color: white;
   cursor: pointer;
 }
 
 #welcomeHome .wrapper .arrow span {
-  margin-right: 15px;
+  margin-right: 1.5rem;
+}
+
+#accountRepresentativeContainer {
+  border-radius: 5rem;
+  padding: 0.5rem;
+  display: flex;
+  background-color: #5774fa;
+  align-items: center;
+}
+
+#userAccountName {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  color: white;
+  font-size: 1.7rem;
 }
 
 #breadCrumb {
@@ -5359,6 +5453,7 @@ body {
 .sidebar {
   position: fixed;
   top: 0;
+  overflow: scroll;
   left: 0;
   height: 100%;
   width: 78px;
@@ -5608,6 +5703,7 @@ body {
   left: 78px;
   background: #f4f2fb;
   transition: all 0.5s ease;
+  overflow: scroll;
 }
 
 .sidebar.active ~ .home_content {
@@ -5624,6 +5720,42 @@ body {
 .sidebar.active ~ .home_content {
   width: calc(100% - 240px);
   left: 240px;
+}
+
+.home_content::-webkit-scrollbar {
+  width: 12px;
+  background-color: #eff1f5;
+}
+
+.home_content::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.home_content::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: lightsteelblue;
+  border: 2px solid #eff1f5;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 1px;
+  background-color: #eff1f5;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: lightsteelblue;
+  border: 2px solid #eff1f5;
+}
+
+.sidebar .profile_content .profile {
+  display: none;
 }
 
 #ourTeamPage #teamInfoSection {
